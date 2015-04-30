@@ -16,4 +16,8 @@ class Address
   define_singleton_method(:all) do
     @@addresses
   end
+
+  define_method(:save) do
+    @@addresses.push(self)
+  end
 end

@@ -7,7 +7,7 @@ class Contact
     @birth_month = attributes.fetch(:birth_month)
     @phones = []
     @addresses = []
-    
+
   end
 
   define_singleton_method(:clear) do
