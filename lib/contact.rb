@@ -1,10 +1,13 @@
 class Contact
   @@contacts = []
-  attr_reader(:name, :birth_month)
+  attr_reader(:name, :birth_month, :phones, :addresses)
 
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
     @birth_month = attributes.fetch(:birth_month)
+    @phones = []
+    @addresses = []
+    
   end
 
   define_singleton_method(:clear) do
@@ -27,5 +30,9 @@ class Contact
 
   define_method(:save) do
     @@contacts.push(self)
+  end
+
+  define_method(:add_phone) do |phone|
+    @phones.push(phone)
   end
 end
