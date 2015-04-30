@@ -12,4 +12,10 @@ describe(Address) do
       expect(test_address.address_line()).to(eq('846 SW Broadway Drive'))
     end
   end
+
+  describe('.all') do
+    it('is empty at first') do
+      expect(Address.all()).to(eq([]))
+    end
+  end
 end

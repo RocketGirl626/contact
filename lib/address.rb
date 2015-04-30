@@ -12,4 +12,8 @@ class Address
   define_singleton_method(:clear) do
     @@addresses = []
   end
+
+  define_singleton_method(:all) do
+    @@addresses
+  end
 end
